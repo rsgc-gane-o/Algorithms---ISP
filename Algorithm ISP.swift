@@ -13,25 +13,25 @@ import Foundation
 
 print("Welcome to Oliver's Unit Converter!")
 
-print("\nWhat type of units are you working with today?")
+print("\nWhat type of units are you working with today?") // gathers starting unit
 print("1 - Mass")
 print("2 - Capacitance")
 print("3 - Temperature")
 print("4 - Volume")
-var unitType = Int(readLine(stripNewline: true)!)!
+var unitType = Int(readLine(stripNewline: true)!)!// read's input and turns it into a variable called unittype
 
 
-if unitType == 1 {
-    print("\nWhat unit are you starting with?")
+if unitType == 1 { // UnitType brakes down each of the 4 main units into their own subcategories making for easy management
+    print("\nWhat unit are you starting with?") // Gather the subcategory starting unit of mass
     print("1 - Gram")
     print("2 - Ounce")
     print("3 - Pound")
     print("4 - Kilogram")
     print("Select what type of unit you are starting with (1/2/3/4/Quit)")
     
-    var startingUnit = Int(readLine(stripNewline: true)!)!
+    var startingUnit = Int(readLine(stripNewline: true)!)! //read's input and turns it into a variable called unittype
     
-    if startingUnit == 1 {
+    if startingUnit == 1 { // Breakes the first subcategory into another subcategory of starting units for easy management
         print("What would you like to convert to?")
         print("1 - Gram")
         print("2 - Ounce")
@@ -42,7 +42,7 @@ if unitType == 1 {
         print("\nOk, please enter in the value you want to change.")
         var Value = Double(readLine(stripNewline: true)!)!
         
-        if startingUnit == 1 && endingUnit == 1{
+        if startingUnit == 1 && endingUnit == 1{ // changes grams into itself, ounces, pounds, and kilograms
             Value = Value*1
             print("And your new value is......")
             print(Value)
@@ -63,7 +63,7 @@ if unitType == 1 {
             print(Value)
         }
     }
-    if startingUnit == 2 {
+    if startingUnit == 2 { // changes ounces into grams, itself, pounds and kilograms
         print("What would you like to convert to?")
         print("1 - Gram")
         print("2 - Ounce")
@@ -95,7 +95,7 @@ if unitType == 1 {
             print(Value)
         }
     }
-    if startingUnit == 3 {
+    if startingUnit == 3 { // changes pounds into grams, ounces, itself, kilograms
         print("What would you like to convert to?")
         print("1 - Gram")
         print("2 - Ounce")
@@ -127,7 +127,7 @@ if unitType == 1 {
             print(Value)
         }
     }
-    if startingUnit == 4 {
+    if startingUnit == 4 { // changes kilograms into grams, ounces, pounds and itself
         print("What would you like to convert to?")
         print("1 - Gram")
         print("2 - Ounce")
@@ -161,7 +161,7 @@ if unitType == 1 {
     }
 }
 
-if unitType == 2{
+if unitType == 2{ // this starts the second unit type as declared earlier. The whole code repeats exactly as described above. All of the code in the next 300 lines is nearly identical.
     print("\nWhat unit are you starting with?")
     print("1 - Picofarad")
     print("2 - Nanofarad")
